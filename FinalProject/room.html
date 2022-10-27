@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Hotel Booking Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="images/temple-favicon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/6f4f67c715.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section class="head">
+      <div class="container flex1">
+        <div class="scoial">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="logo">
+          <img src="images/temple-logo64.png" alt="Page logo" />
+        </div>
+        <div class="address">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>4800 Montgomery Ln #300, Bethesda, MD 20814</span>
+        </div>
+      </div>
+    </section>
+
+    <header class="header">
+      <div class="container">
+        <nav class="navbar flex1">
+          <div class="sticky_logo logo">
+            <img src="images/temple-logo64.png" alt="Page logo" />
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="index2.html">Home</a></li>
+            <li><a href="index2.html#about">about</a></li>
+            <li><a href="room.html">room</a></li>
+            <li><a href="services2.html">services</a></li>
+            <li><a href="testimonials.html">blog</a></li>
+          </ul>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobliemmenu);
+
+      function mobliemmenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+    <section class="room wrapper2 top" id="room">
+      <div class="container">
+        <div class="heading">
+          <h5>OUR ROOMS</h5>
+          <h2>Fascinating rooms & suites</h2>
+        </div>
+        <div class="content flex mtop">
+          <div class="left grid2">
+            <div class="box">
+              <i class="fas fa-desktop"></i>
+              <p>Free Cost</p>
+              <h3>No booking fee</h3>
+            </div>
+            <div class="box">
+              <i class="fas fa-dollar-sign"></i>
+              <p>Free Cost</p>
+              <h3>Best rate guarantee</h3>
+            </div>
+            <div class="box">
+              <i class="fab fa-resolving"></i>
+              <p>Free Cost</p>
+              <h3>Reservations 24/7</h3>
+            </div>
+            <div class="box">
+              <i class="fal fa-alarm-clock"></i>
+              <p>Free Cost</p>
+              <h3>High-speed Wi-Fi</h3>
+            </div>
+            <div class="box">
+              <i class="fas fa-mug-hot"></i>
+              <p>Free Cost</p>
+              <h3>Free breakfast</h3>
+            </div>
+            <div class="box">
+              <i class="fas fa-user-tie"></i>
+              <p>Free Cost</p>
+              <h3>One person free</h3>
+            </div>
+          </div>
+          <div class="right">
+            <img src="images/r.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="reservation-main">
+      <div class="reservartion-banner">
+        <h2>RESERVE YOUR ROOM</h2>
+      </div>
+      <form action="index.html" method="get" class="reservation-form">
+        <div class="elem-group" id="enter-name">
+          <label for="fname"
+            >Please enter your name
+            <input
+              type="text"
+              name="fname"
+              id="fname"
+              placeholder="John Doe/Jane Doe"
+              pattern="[A-Z\sa-z]{3,20}"
+              required
+          /></label>
+        </div>
+        <div class="elem-group">
+          <label for="email"
+            >Email Address
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="john.doe@email.com"
+          /></label>
+        </div>
+        <div class="elem-group">
+          <label for="phone"
+            >Telephone / Mobile
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              placeholder="498-348-3872"
+              pattern="(\d{3})?\s?(\d{3})?\s?(\d{4})"
+              required
+          /></label>
+        </div>
+
+        <hr />
+
+        <div class="elem-group inlined">
+          <label for="adult">Adults</label>
+          <input
+            type="number"
+            id="adult"
+            name="total_adults"
+            placeholder="2"
+            min="1"
+            required
+          />
+        </div>
+
+        <div class="elem-group inlined">
+          <label for="child">Children</label>
+          <input
+            type="number"
+            id="child"
+            name="total_children"
+            placeholder="2"
+            min="0"
+            required
+          />
+        </div>
+
+        <div class="elem-group inlined">
+          <label for="checkin-date">Check-in Date</label>
+          <input type="date" id="checkin-date" name="checkin" required />
+        </div>
+
+        <div class="elem-group inlined">
+          <label for="checkout-date">Check-out Date</label>
+          <input type="date" id="checkout-date" name="checkout" required />
+        </div>
+
+        <div class="elem-group">
+          <label for="room-type"
+            >Room type
+            <select name="room-type" id="room-type">
+              <option value="Single">Single</option>
+              <option value="Double">Double</option>
+              <option value="Triple">Triple</option>
+              <option value="Quad">Quad</option>
+              <option value="Queen">Queen</option>
+              <option value="King">King</option>
+              <option value="Twin">Twin</option>
+              <option value="Hollywood Twin Rooms">Hollywood Twin Rooms</option>
+              <option value="Double-double">Double-double</option>
+              <option value="Studio">Studio</option>
+              <option value="Suite">Suite / Executive Suite</option>
+              <option value="Mini Suite">Mini Suite / Junior Suite</option>
+              <option value="Apartment">Apartments (Extended Stay)</option>
+              <option value="Conecting">Conecting Rooms</option>
+            </select>
+          </label>
+        </div>
+        <hr />
+        <div class="elem-group">
+          <label for="message">Anything Else?</label>
+          <textarea
+            id="message"
+            name="visitor_message"
+            placeholder="Tell us anything else that might be important."
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Book The Room</button>
+        <script>
+          var currentDateTime = new Date();
+          var year = currentDateTime.getFullYear();
+          var month = currentDateTime.getMonth() + 1;
+          var date = currentDateTime.getDate() + 1;
+
+          if (date < 10) {
+            date = "0" + date;
+          }
+          if (month < 10) {
+            month = "0" + month;
+          }
+
+          var dateTomorrow = year + "-" + month + "-" + date;
+          var checkinElem = document.querySelector("#checkin-date");
+          var checkoutElem = document.querySelector("#checkout-date");
+
+          checkinElem.setAttribute("min", dateTomorrow);
+
+          checkinElem.onchange = function () {
+            checkoutElem.setAttribute("min", this.value);
+          };
+        </script>
+      </form>
+    </section>
+
+    <footer>
+      <div class="container top">
+        <div class="subscribe" id="contact">
+          <h2>Subscribe newsletter</h2>
+          <p>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+            officia deserunt mollit anim id est laborum.
+          </p>
+          <div class="input flex">
+            <input type="email" placeholder="Your Email address" />
+            <button class="subscrubebtn flex1">
+              <span>Subscribe</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="content grid top">
+          <div class="send-us-message">
+            <div class="social-media-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <form action="#" method="get" class="send-message-form">
+              <fieldset>
+                <input
+                  type="text"
+                  name="f&lname"
+                  id="f&lname"
+                  required
+                  placeholder="First & Last Name"
+                />
+                <input
+                  type="text"
+                  name="eaddress"
+                  id="eaddress"
+                  required
+                  placeholder="Email Address"
+                />
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="6"
+                  placeholder="Write your message here..."
+                ></textarea>
+                <input type="submit" value="Send Message" class="submitBtn" />
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="box">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><i class="fas fa-angle-double-right"></i>Big Data</li>
+              <li><i class="fas fa-angle-double-right"></i>Wellness</li>
+              <li><i class="fas fa-angle-double-right"></i>Spa Gallery</li>
+              <li><i class="fas fa-angle-double-right"></i>Reservation</li>
+              <li><i class="fas fa-angle-double-right"></i>FAQ</li>
+              <li><i class="fas fa-angle-double-right"></i>Contact</li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <h2>Services</h2>
+            <ul>
+              <li><i class="fas fa-angle-double-right"></i>Restaurant</li>
+              <li><i class="fas fa-angle-double-right"></i>Swimming Pool</li>
+              <li><i class="fas fa-angle-double-right"></i>Wellness & Spa</li>
+              <li><i class="fas fa-angle-double-right"></i>Conference Room</li>
+              <li><i class="fas fa-angle-double-right"></i>Events</li>
+              <li><i class="fas fa-angle-double-right"></i>Adult Room</li>
+            </ul>
+          </div>
+
+          <div class="">
+            <h2>Contact Information</h2>
+            <p>
+              <b>Address</b><br />
+              4800 Montgomery Ln #300, Bethesda, MD 20814
+            </p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.3512432983997!2d-77.09607897079233!3d38.98325284120325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97b6b8f21f1%3A0x9a0b3cde14da0a60!2s4800%20Montgomery%20Ln%20%23300%2C%20Bethesda%2C%20MD%2020814%2C%20EE.%20UU.!5e0!3m2!1ses!2smx!4v1657760376264!5m2!1ses!2smx"
+              width="250"
+              height="150"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p><b>Phone</b> (000)123-4567</p>
+            <p><b>Email</b> <a href="#">email@example.com</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
